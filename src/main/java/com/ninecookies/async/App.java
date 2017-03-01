@@ -21,7 +21,7 @@ import org.eclipse.jetty.servlet.ServletHolder;
 public class App {
     public static class AsyncServlet extends HttpServlet {
 
-        private final ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
+        private final ScheduledExecutorService service = Executors.newScheduledThreadPool(Runtime.getRuntime().availableProcessors());
 
         @Override
         protected void doGet(HttpServletRequest request, final HttpServletResponse resp) throws ServletException, IOException {
