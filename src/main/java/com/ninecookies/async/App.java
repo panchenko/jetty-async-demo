@@ -35,7 +35,7 @@ public class App {
                 } finally {
                     ctxt.complete();
                 }
-            }), 5, TimeUnit.SECONDS);
+            }), 10, TimeUnit.SECONDS);
         }
     }
 
